@@ -4,10 +4,10 @@
   gtag('js', new Date());
 
   gtag('config', 'G-L7856P3VNT');
-</script>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+</script><!DOCTYPE html>
+<html lang="en-us">
+
+<head>
 <script>
   // Block all fullscreen requests from Unity or any script
   const noop = () => Promise.resolve();
@@ -18,7 +18,7 @@
   Element.prototype.mozRequestFullScreen = noop;
   Element.prototype.msRequestFullscreen = noop;
 </script>
-<base href="https://cdn.jsdelivr.net/gh/Ludus-hub/games-1@Main/wordle/">
+<base href="https://cdn.jsdelivr.net/gh/BluePotato102/drive-mad@main/">
 <script>
   // Force cross-origin images to load with CORS so canvas/WebGL games don't
   // hit a "tainted canvas" error when their art assets are served from this CDN.
@@ -41,7 +41,6 @@
     };
   })();
 </script>
-
 <script>
 (function() {
     let masterGainNodes = [];
@@ -143,30 +142,62 @@
     };
 })();
 </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta name="theme-color" content="#6aaa64" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" href="img/logo_32x32.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="img/logo_32x32.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="img/logo_192x192.png" />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="build/bundle.css" />
-    <meta property="og:url" content="https://3kh0.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Wordle+ - A word guessing game" />
-    <meta property="og:description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta property="og:image" content="img/og_1200x630.png" />
-    <script>
-      // PWA Service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-      }
-    </script>
-    <script defer src="build/bundle.js"></script>
-    <title>Wordle | 3kh0</title>
-  </head>
 
-  <body></body>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Drive Mad</title>
+  <script type="text/javascript" src="Jump_Gamemonetize.js"></script>
+  <meta name="description" content="">
+  <meta name="google" content="notranslate">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="webapp/fancade.css">
+  <link rel="icon" href="webapp/cover.jpg">
+</head>
+
+<body id="body">
+
+  <!-- Modal dialog div -->
+  <div id="modal_parent">
+    <div id="modal_content">
+      <span id="modal_close_button">&times;</span>
+      <div id="store_link_modal_content" class="modal_inner"></div>
+      <div id="share_file_modal_content" class="modal_inner"></div>
+    </div>
+  </div>
+
+  <!-- 
+      Game canvas and overlay. Emscripten makes some assumptions about how the canvas is positioned in order
+      to translate document to game coordinates
+    -->
+  <div id="canvas_border" class="emscripten_border">
+    <div id="play_content" class="middle center">
+      <div class="edge">
+        <div class="box">
+          <div class="black">
+            <img src="webapp/cover.jpg" class="cover">
+            <p class="title">Drive Mad</p>
+            <p class="author">Martin Magni</p>
+          </div>
+        </div>
+      </div>
+      <div id="progress_or_play">
+        <progress id="progress" class="loading" value="0" max="100"></progress>
+      </div>
+      <p class="description"></p>
+    </div>
+    <canvas class="emscripten" id="canvas" tabindex=-1>
+    </canvas>
+    <div id="gradient"></div>
+    <div id="webview_content"></div>
+  </div>
+
+  <!-- Manual JS, Called from WASM -->
+  <script type="text/javascript" src="webapp/source_min.js"></script>
+
+  <!-- Auto generated JS -->
+  <script type="text/javascript" src="webapp/index.js"></script>
+</body>
+
 </html>

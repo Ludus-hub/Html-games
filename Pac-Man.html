@@ -1,13 +1,13 @@
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-L7856P3VNT');
-</script>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+</script><!doctype html>
+<html>
+    <head>
 <script>
   // Block all fullscreen requests from Unity or any script
   const noop = () => Promise.resolve();
@@ -18,30 +18,7 @@
   Element.prototype.mozRequestFullScreen = noop;
   Element.prototype.msRequestFullscreen = noop;
 </script>
-<base href="https://cdn.jsdelivr.net/gh/Ludus-hub/games-1@Main/wordle/">
-<script>
-  // Force cross-origin images to load with CORS so canvas/WebGL games don't
-  // hit a "tainted canvas" error when their art assets are served from this CDN.
-  (function() {
-    const OrigImage = window.Image;
-    window.Image = function(...args) {
-      const img = new OrigImage(...args);
-      img.crossOrigin = 'anonymous';
-      return img;
-    };
-    window.Image.prototype = OrigImage.prototype;
-
-    const origCreateElement = document.createElement.bind(document);
-    document.createElement = function(tagName, ...rest) {
-      const el = origCreateElement(tagName, ...rest);
-      if (typeof tagName === 'string' && tagName.toLowerCase() === 'img') {
-        el.crossOrigin = 'anonymous';
-      }
-      return el;
-    };
-  })();
-</script>
-
+<base href="https://cdn.jsdelivr.net/gh/Ludus-hub/games-2@Main/pacman/">
 <script>
 (function() {
     let masterGainNodes = [];
@@ -142,31 +119,30 @@
         originalSetItem.call(window.localStorage, key, value);
     };
 })();
-</script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta name="theme-color" content="#6aaa64" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="icon" href="img/logo_32x32.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="img/logo_32x32.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="img/logo_192x192.png" />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="build/bundle.css" />
-    <meta property="og:url" content="https://3kh0.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Wordle+ - A word guessing game" />
-    <meta property="og:description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta property="og:image" content="img/og_1200x630.png" />
-    <script>
-      // PWA Service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-      }
-    </script>
-    <script defer src="build/bundle.js"></script>
-    <title>Wordle | 3kh0</title>
-  </head>
+</script><script async src="https://arc.io/widget.min.js#AhhMHcMM"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7257238324060789" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <title>jsPacman | JavaScript Ms. Pac-Man Remake</title>
+    <link rel="shortcut icon" href="favicon.png"><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6V3QXEWMB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <body></body>
+  gtag('config', 'G-P6V3QXEWMB');
+</script>
+
+</head><script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '829117322223812658', // Bigfoot's Game Shack
+        channel: '1035597205354057789' // #school
+    })
+</script>
+    <body>
+        <h1 style="position: absolute; left: -1000px;">jsPacman | HTML - CSS - JavaScript | Ms. Pac-Man Remake</h1>
+        <h2 style="position: absolute; left: -1000px;">Play Online Ms. Pac-Man</h2>
+        <div class="js-pacman-playground with-border">
+        </div>
+    <script type="text/javascript" src="bundle.js"></script></body>
 </html>
